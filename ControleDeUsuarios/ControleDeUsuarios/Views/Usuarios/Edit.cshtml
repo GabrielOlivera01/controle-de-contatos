@@ -1,0 +1,28 @@
+﻿@model ControleDeUsuarios.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Editar Contato</h4> 
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditReg">
+            
+            @Html.Partial("_FormUsuario")
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary mt-3"/>
+                <button class="btn btn-secondary mt-3">
+                    <a asp-action="Index" class="text-light text-decoration-none">Voltar</a>
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

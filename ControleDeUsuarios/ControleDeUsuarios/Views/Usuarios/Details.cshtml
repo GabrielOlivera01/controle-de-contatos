@@ -1,0 +1,40 @@
+﻿@model ControleDeUsuarios.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@*<h1>Details</h1>*@
+
+<div>
+    <h4>Informações do Contato</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tell)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tell)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="btn btn-primary">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="text-light text-decoration-none">Editar</a>
+    </button>
+    <button class="btn btn-secondary">
+        <a asp-action="Index" class="text-light text-decoration-none">Voltar</a>
+    </button>
+</div>
